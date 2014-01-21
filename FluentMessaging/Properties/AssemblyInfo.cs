@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("FluentMessaging")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Declarative syntax for piping data in Azure Service Bus Message queues and other technologies.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("FluentMessaging")]

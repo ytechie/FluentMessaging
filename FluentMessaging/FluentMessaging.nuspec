@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Jason Young</authors>
+    <owners>Jason Young</owners>
+    <licenseUrl>https://github.com/ytechie/FluentMessaging/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ytechie/FluentMessaging</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>.net fluent azure</tags>
+  </metadata>
+</package>
