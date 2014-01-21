@@ -2,6 +2,12 @@
 
 Declarative syntax for piping data in Azure Service Bus Message queues and other technologies.
 
+## Installation
+
+Simply add the [FluentMessaging NuGet package](https://www.nuget.org/packages/FluentMessaging) to your project.
+
+## Usage
+
 ### Moving Data from a Queue to a Topic
 	QueueFramework
 	    .FromQueue(queueConnectionString, queueName)
@@ -13,6 +19,8 @@ Declarative syntax for piping data in Azure Service Bus Message queues and other
 	var rx = QueueFramework
 		.FromTopicSubscription(connectionString, topicName, subscriptionName)
 		.OutputToReactive(serializer);
+
+
 
 # License
 
