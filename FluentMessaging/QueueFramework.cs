@@ -18,12 +18,7 @@
 
         public static TopicSubscriptionSource FromTopicSubscription(string connectionString, string queueName, string subscription)
         {
-            var source = new TopicSubscriptionSource
-            {
-                ConnectionString = connectionString,
-                QueueName = queueName,
-                SubscriptionName = subscription
-            };
+            var source = new TopicSubscriptionSource(connectionString, queueName, subscription);
 
             return source;
         }

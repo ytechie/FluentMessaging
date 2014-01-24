@@ -79,6 +79,7 @@
     <Compile Include="QueueOutput.cs" />
     <Compile Include="TopicOutput.cs" />
     <Compile Include="TopicSubscriptionSource.cs" />
+    <Compile Include="TopicSubscriptionSourceExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
