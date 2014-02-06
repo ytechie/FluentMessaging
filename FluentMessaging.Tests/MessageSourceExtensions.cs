@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace FluentMessaging
+namespace Microsoft.FluentMessaging
 {
     [TestClass]
     public class MessageSourceExtensionsTests

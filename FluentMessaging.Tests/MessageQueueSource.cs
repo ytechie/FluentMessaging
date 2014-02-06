@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace FluentMessaging
+namespace Microsoft.FluentMessaging
 {
     [TestClass]
     public class MessageQueueSourceTests

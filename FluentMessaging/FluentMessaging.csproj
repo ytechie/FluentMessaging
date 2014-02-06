@@ -7,8 +7,8 @@
     <ProjectGuid>{FFA12603-1800-4330-A386-F071E541D12D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FluentMessaging</RootNamespace>
-    <AssemblyName>FluentMessaging</AssemblyName>
+    <RootNamespace>Microsoft.FluentMessaging</RootNamespace>
+    <AssemblyName>Microsoft.FluentMessaging</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

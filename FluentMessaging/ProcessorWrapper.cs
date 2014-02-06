@@ -1,4 +1,4 @@
-﻿namespace FluentMessaging
+﻿namespace Microsoft.FluentMessaging
 {
     public class ProcessorWrapper
     {

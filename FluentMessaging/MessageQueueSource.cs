@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.ServiceBus.Messaging;
 
-namespace FluentMessaging
+namespace Microsoft.FluentMessaging
 {
     public class MessageQueueSource : IMessageQueueSource
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.ServiceBus.Messaging;
 using System;
 
-namespace FluentMessaging
+namespace Microsoft.FluentMessaging
 {
     public class TopicSubscriptionSource : IMessageQueueSource
     {

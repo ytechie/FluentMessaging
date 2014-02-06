@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace FluentMessaging
+namespace Microsoft.FluentMessaging
 {
     public interface ISerializer<T>
     {

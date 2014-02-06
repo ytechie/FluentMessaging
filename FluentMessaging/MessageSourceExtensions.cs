@@ -4,7 +4,7 @@ using System.IO;
 using System.Reactive.Subjects;
 using System.Reflection;
 
-namespace FluentMessaging
+namespace Microsoft.FluentMessaging
 {
     public static class MessageSourceExtensions
     {

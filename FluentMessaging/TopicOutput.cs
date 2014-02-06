@@ -4,7 +4,7 @@ using System.Reflection;
 using log4net;
 using Microsoft.ServiceBus.Messaging;
 
-namespace FluentMessaging
+namespace Microsoft.FluentMessaging
 {
     public class TopicOutput : IMessageSink
     {
