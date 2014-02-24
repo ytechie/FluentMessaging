@@ -1,4 +1,7 @@
-﻿using log4net;
+﻿using System;
+using System.Collections.Generic;
+using System.Reactive.Linq;
+using log4net;
 using Microsoft.Practices.ServiceLocation;
 using System.IO;
 using System.Reactive.Subjects;
@@ -37,11 +40,33 @@ namespace Microsoft.FluentMessaging
             queueSource.StartMessagePump(message =>
             {
                 var stream = message.GetBody<Stream>();
-                var obj = serializer.Deserialize(stream);
-                rx.OnNext(obj);
+                var objs = serializer.Deserialize(stream);
+                foreach (var obj in objs)
+                {
+                    rx.OnNext(obj);
+                }
             });
 
             return rx;
+        }
+
+        public static void OutputToRaw<TOutput>(this IMessageQueueSource queueSource, ISerializer<TOutput> serializer, Action<IEnumerable<TOutput>> action)
+        {
+            queueSource.StartMessagePump(message =>
+            {
+                try
+                {
+                    var stream = message.GetBody<Stream>();
+                    var objs = serializer.Deserialize(stream);
+                    action(objs);
+                    message.Complete();
+                }
+                catch (Exception ex)
+                {
+                    Log.Error("Exception processing message", ex);
+                    message.Abandon();
+                }
+            });
         }
     }
 }

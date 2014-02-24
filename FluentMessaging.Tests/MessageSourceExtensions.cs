@@ -40,7 +40,7 @@ namespace Microsoft.FluentMessaging
             source.Setup(x => x.StartMessagePump(It.IsAny<Action<BrokeredMessage>>()))
                 .Callback<Action<BrokeredMessage>>(r => pump = r);
             var serializer = new Mock<ISerializer<int>>();
-            serializer.Setup(x => x.Deserialize(It.IsAny<MemoryStream>())).Returns(0);
+            serializer.Setup(x => x.Deserialize(It.IsAny<MemoryStream>())).Returns(new List<int>{0});
 
             source.Object.OutputToReactive(serializer.Object);
 
@@ -63,7 +63,7 @@ namespace Microsoft.FluentMessaging
                 .Callback<Action<BrokeredMessage>>(r => pump = r);
 
             var serializer = new Mock<ISerializer<int>>();
-            serializer.Setup(x => x.Deserialize(It.IsAny<MemoryStream>())).Returns((MemoryStream ms) => ms.ReadByte());
+            serializer.Setup(x => x.Deserialize(It.IsAny<MemoryStream>())).Returns((MemoryStream ms) => new List<int>{ms.ReadByte()});
 
             var rx = source.Object.OutputToReactive(serializer.Object);
 
