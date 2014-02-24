@@ -53,7 +53,7 @@ namespace Microsoft.FluentMessaging
             {
                 if (_subscriptionClient == null)
                     _subscriptionClient = SubscriptionClient.CreateFromConnectionString(
-                        _connectionString, _queueName, _subscriptionName, ReceiveMode.ReceiveAndDelete);
+                        _connectionString, _queueName, _subscriptionName, ReceiveMode.PeekLock);
 
                 return _subscriptionClient;
             }
@@ -61,8 +61,8 @@ namespace Microsoft.FluentMessaging
 
         public void StartMessagePump(Action<BrokeredMessage> messageProcessor)
         {
-            var options = new OnMessageOptions { AutoComplete = true };
-            SubscriptionClient.OnMessage(messageProcessor);
+            var options = new OnMessageOptions { AutoComplete = false, MaxConcurrentCalls = MaxConcurrency };
+            SubscriptionClient.OnMessage(messageProcessor, options);
         }
     }
 }
